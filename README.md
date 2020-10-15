@@ -1,6 +1,6 @@
 ![openapi-cli-tool](https://raw.githubusercontent.com/hakopako/openapi-cli-tool/master/doc/logo.png)
 
-## Forked and remade to run interactively with Python
+## Forked and modified to run interactively with Python
 ### Steps to run
 ```
 mkdir somedir
