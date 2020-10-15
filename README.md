@@ -20,6 +20,44 @@ somedir$ python3
 </html>
 ```
 
+### Using in AWS Lambda
+### lambda_function.py
+```
+import os
+import sys
+import src.commands.bundle as bundle
+
+def lambda_handler(event, context):
+    return bundle.bundle(('swagger.yml',),'html')
+```
+### Handler
+`lambda_function.lambda_handler`
+### Directory Layout
+```
+lambda_function.zip/
+lambda_function.py
+swagger.yml
+CHANGELOG.md
+LICENSE
+Makefile
+README.md
+requirements.txt
+setup.py
+tablulate.py
+Click-*/
+PyYAML-*/
+__pycache__/
+bin/
+click/
+doc/
+example/
+src/
+tabulate-*/
+tests/
+yaml/
+```
+
+
 
 [![Build Status](https://travis-ci.com/hakopako/openapi-cli-tool.svg?branch=master)](https://travis-ci.com/hakopako/openapi-cli-tool)
  <img src="https://img.shields.io/badge/version-v0.3.0-green.svg">
