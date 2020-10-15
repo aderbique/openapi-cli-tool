@@ -13,7 +13,7 @@ cp /path/to/swagger.yml .
 ```
 somedir$ python3
 >>> import src.commands.bundle
->>> html =  src.commands.bundle.bundle(('swagger.yml','swagger.yml'),'html')
+>>> html =  src.commands.bundle.bundle(('swagger.yml',),'html')
 >>> print(html)
 <html>
 ...
