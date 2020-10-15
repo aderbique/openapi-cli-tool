@@ -19,7 +19,7 @@ def export_table(export_data, headers):
     return tabulate(export_data, headers=headers)
 
 
-def export_html(export_data): gerger
+def export_html(export_data):
     result = json.dumps(export_data)
     template = load_file(resource_filename('src.resources', 'template.html'))
     html = template.replace('###TITLE###', export_data['info']['title']).replace('###SPEC###', result)
