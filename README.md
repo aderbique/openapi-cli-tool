@@ -9,11 +9,11 @@ git clone https://github.com/aderbique/openapi-cli-tool .
 pip3 install -r requirements.txt -t .
 cp /path/to/swagger.yml .
 ```
-### Calling from python script
+### Calling from python script (From API spec to HTML)
 ```
 somedir$ python3
->>> import src.commands.bundle
->>> html =  src.commands.bundle.bundle(('swagger.yml',),'html')
+>>> import src.commands.bundle as bundle
+>>> html =  bundle.bundle(('swagger.yml',),'html')
 >>> print(html)
 <html>
 ...
