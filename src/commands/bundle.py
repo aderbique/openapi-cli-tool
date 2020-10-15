@@ -35,8 +35,8 @@ def run_bundle(spec_paths, filename=None):
 def bundle(spec_paths, type, filename=None):
     specs = run_bundle(spec_paths, filename)
     if type == 'json':
-        export_json(specs)
+        return export_json(specs)
     elif type == 'yaml':
-        export_yaml(specs)
+        return export_yaml(specs)
     elif type == 'html':
-        export_html(specs)
+        return export_html(specs)

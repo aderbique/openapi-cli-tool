@@ -44,7 +44,7 @@ def cmd_resolve(method, path, file_paths, type):
 @click.option('-t', '--type', 'type', default='json', show_default=True, callback=validate_bundle_type, help='Export data type. {json|yaml|html}')
 @click.argument('file_paths', nargs=-1, type=click.Path(exists=True))
 def cmd_bundle(file, type, file_paths):
-    bundle(file_paths, type, file)
+    return bundle(file_paths, type, file)
 
 
 @main.command('scaffold', help='Interactively create a simple OpenAPI Specification.')
