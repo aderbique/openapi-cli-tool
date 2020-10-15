@@ -1,5 +1,25 @@
 ![openapi-cli-tool](https://raw.githubusercontent.com/hakopako/openapi-cli-tool/master/doc/logo.png)
 
+## Forked and modified to run interactively with Python
+### Steps to run
+```
+mkdir somedir
+cd somedir
+git clone https://github.com/aderbique/openapi-cli-tool .
+pip3 install -r requirements.txt -t .
+cp /path/to/swagger.yml .
+```
+### Calling from python script
+```
+somedir$ python3
+>>> import src.commands.bundle
+>>> html =  src.commands.bundle.bundle(('swagger.yml','swagger.yml'),'html')
+>>> print(html)
+<html>
+...
+</html>
+```
+
 
 [![Build Status](https://travis-ci.com/hakopako/openapi-cli-tool.svg?branch=master)](https://travis-ci.com/hakopako/openapi-cli-tool)
  <img src="https://img.shields.io/badge/version-v0.3.0-green.svg">
